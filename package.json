@@ -1,0 +1,47 @@
+{
+  "name": "knowpedia-entry",
+  "version": "0.1.0",
+  "description": "知识百科全书，各种专业知识的免费共享平台。",
+  "scripts": {
+    "start": "npm install && npm run dev",
+    "dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "hai2007_nodejs -d ./dist && webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knowpedia/entry.git"
+  },
+  "keywords": [
+    "knowpedia",
+    "entry"
+  ],
+  "author": "你好2007",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/knowpedia/entry/issues"
+  },
+  "homepage": "https://github.com/knowpedia/entry#readme",
+  "dependencies": {
+    "@hai2007/polyfill": "0.1.1",
+    "@hai2007/style": "^0.3.0",
+    "@hai2007/tool": "^0.6.6",
+    "knowpedia": "0.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@hai2007/algorithm": "^0.6.2",
+    "@hai2007/nodejs": "^1.0.1",
+    "autoprefixer": "^9.7.1",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^2.1.1",
+    "file-loader": "^4.2.0",
+    "postcss": "^7.0.21",
+    "postcss-loader": "^3.0.0",
+    "url-loader": "^2.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
+  }
+}
