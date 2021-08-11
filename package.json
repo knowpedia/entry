@@ -1,6 +1,6 @@
 {
   "name": "knowpedia-entry",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "知识百科全书，各种专业知识的免费共享平台。",
   "scripts": {
     "start": "npm install && npm run dev",

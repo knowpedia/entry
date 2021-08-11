@@ -9,6 +9,14 @@ import "./styles/common.css";
 
 import App from './App.paper';
 
+// 打开新页面
+Knowpedia.prototype.loadPage = url => {
+    let aDom = document.createElement('a');
+    aDom.setAttribute('href', url);
+    aDom.setAttribute('target', '_blank');
+    aDom.click();
+};
+
 // 创建对象
 window.knowpedia = new Knowpedia({
 

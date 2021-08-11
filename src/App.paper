@@ -1,17 +1,183 @@
 <template>
-    设计开发中，敬请期待！
+    <div class="menu">
+        <h2>
+            知识百科
+        </h2>
+        <ul>
+            <li @click='doScroll("mathematics")'>
+                数学
+            </li>
+            <li @click='doScroll("computer")'>
+                计算机
+            </li>
+            <li @click='doScroll("english")'>
+                英语
+            </li>
+        </ul>
+    </div>
+    <div class="content" id='content-root'>
+        <div>
+            <h3>
+                知识百科全书，各种专业知识的免费共享平台
+            </h3>
+            <ui-search></ui-search>
+            <h4 id='fixed-mathematics'>
+                数学
+            </h4>
+            <p class='blank'>
+                无内容
+            </p>
+            <h4 id='fixed-computer'>
+                计算机
+            </h4>
+            <p class='blank'>
+                无内容
+            </p>
+            <h4 id='fixed-english'>
+                英语
+            </h4>
+            <p class='blank'>
+                无内容
+            </p>
+        </div>
+        <footer>
+            <p>
+                Copyright©2021 hai2007 All Rights Reserved 你好2007
+            </p>
+            <a href='https://hai2007.gitee.io/sweethome/' target="_blank">
+                走一步，再走一步。
+            </a>
+        </footer>
+    </div>
 </template>
 <script>
-
-
+    import fixedScroll from './services/fixedScroll.js';
+    import uiSearch from './components/ui-search.paper';
     export default {
-        data() {
-            return {
-
-            };
+        methods: {
+            doScroll(fixedName) {
+                window.location.href = "#/?fixed=" + fixedName;
+                fixedScroll(document.getElementById('content-root'), 0);
+            }
+        },
+        mounted() {
+            fixedScroll(document.getElementById('content-root'), 0);
+        },
+        component: {
+            uiSearch
         }
     };
 </script>
 <style>
+    [quickpaper] {
 
+        &>div {
+            height: 100vh;
+            vertical-align: top;
+            display: inline-block;
+
+            &.menu {
+                width: 70px;
+                background-color: #303435;
+                text-align: center;
+                color: white;
+
+                &>h2 {
+                    font-size: 12px;
+                    background-image: url('./asset/logo.png');
+                    padding-top: 70px;
+                    background-size: 90% auto;
+                    background-position: center top;
+                    background-repeat: no-repeat;
+                    font-weight: 800;
+                    margin-top: 10px;
+                }
+
+                &>ul {
+                    margin-top: 30px;
+
+                    &>li {
+                        background-color: #fefefe;
+                        color: #303435;
+                        margin: 7px;
+                        margin-top: 10px;
+                        padding: 3px 0;
+                        font-size: 12px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &.content {
+                width: calc(100vw - 70px);
+                overflow: auto;
+                background-color: rgb(243 240 240);
+
+                &>div {
+                    width: 1000px;
+                    padding: 300px 25px 20px;
+                    margin: auto;
+                    background-image: url('./asset/logo.png');
+                    background-size: auto 300px;
+                    background-repeat: no-repeat;
+                    background-position: center top;
+
+                    &>h3 {
+                        text-align: center;
+                        font-family: serif;
+                        font-weight: 200;
+                    }
+
+                    &>h4 {
+                        font-size: 20px;
+                        line-height: 40px;
+                        margin: 30px 0 10px 0;
+                    }
+
+                    &>p {
+                        &.blank {
+                            background-color: white;
+                            text-align: center;
+                            line-height: 100px;
+                            background-color: #e1dcdc;
+                            color: white;
+                            font-size: 30px;
+                            margin: 0 30px;
+                        }
+                    }
+
+                }
+            }
+
+            &>footer {
+                text-align: center;
+                padding: 10px 0 20px 0;
+                min-width: 1000px;
+
+                &>p {
+                    line-height: 40px;
+                    height: 40px;
+                    color: gray;
+                    font-size: 14px;
+                }
+
+                &>a {
+                    display: inline-block;
+                    padding: 0 15px;
+                    line-height: 30px;
+                    height: 30px;
+                    color: #999999;
+                    font-size: 12px;
+                    border: 1px solid #E3E3E5;
+                    border-radius: 45px;
+
+                    &:hover {
+                        color: gray;
+                        font-weight: 800;
+                        border-color: gray;
+                    }
+                }
+            }
+        }
+    }
 </style>
