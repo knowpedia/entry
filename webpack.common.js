@@ -14,10 +14,6 @@ module.exports = {
             loader: ['knowpedia/loader/index.js'],
             exclude: /node_modules/
         }, {
-            test: /\.clunch$/,
-            loader: ['clunch/loader.js'],
-            exclude: /node_modules/
-        }, {
             test: /\.(scss|css)$/,
             loader: ['knowpedia/style-loader/index.js', 'css-loader', 'postcss-loader', './scss-loader.js']
         }, {
