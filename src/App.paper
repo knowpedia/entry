@@ -1,56 +1,56 @@
 <template>
-    <div class="menu">
-        <h2>
-            知识百科
-        </h2>
-        <ul>
-            <li @click='doScroll("mathematics")'>
-                数学
-            </li>
-        </ul>
-    </div>
-    <div class="content" id='content-root'>
-        <div>
-            <h3>
-                知识百科全书，各种专业知识的免费共享平台
-            </h3>
+    <header>
+        Knowpedia
+        <span>
             <ui-search></ui-search>
-            <h4 id='fixed-mathematics'>
-                数学
-            </h4>
-            <ul>
-                <li @click='loadPage("https://knowpedia.github.io/Higher-Algebra/")'>
-                    <h5>
-                        《高等代数》
-                    </h5>
-                    <div>
-                        包括行列式和矩阵、线性方程组、线性空间和线性变换、欧几里得空间、双线性函数与辛空间等代数基础知识。
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <footer>
-            <p>
-                Copyright©2021 hai2007 All Rights Reserved 你好2007
-            </p>
-            <a href='https://hai2007.gitee.io/sweethome/' target="_blank">
-                走一步，再走一步。
-            </a>
-        </footer>
+        </span>
+    </header>
+    <nav>
+        <span @click='changeNav("home")' :active='pagename=="home"?"yes":"no"'>
+            首页
+        </span>
+        <span @click='changeNav("mathematics")' :active='pagename=="mathematics"?"yes":"no"'>
+            数学
+        </span>
+        <span @click='changeNav("computer")' :active='pagename=="computer"?"yes":"no"'>
+            计算机
+        </span>
+    </nav>
+    <div>
+        <component :is='page'></component>
     </div>
 </template>
 <script>
-    import fixedScroll from './services/fixedScroll.js';
     import uiSearch from './components/ui-search.paper';
+    import urlFormat from './services/urlFormat.js';
+    let pages = {
+        home: () => import('./pages/home.paper'),
+        mathematics: () => import('./pages/mathematics.paper'),
+        computer: () => import('./pages/computer.paper')
+    };
     export default {
+        data() {
+            return {
+                page: null,
+                pagename: ""
+            };
+        },
         methods: {
-            doScroll(fixedName) {
-                window.location.href = "#/?fixed=" + fixedName;
-                fixedScroll(document.getElementById('content-root'), 0);
-            }
+            changeNav(pagename) {
+                window.location.href = "#/" + pagename;
+                this.pagename = pagename;
+                this.loadPage();
+            },
+            loadPage() {
+                pages[this.pagename]().then(data => {
+                    this.page = data.default;
+                });
+            },
         },
         mounted() {
-            fixedScroll(document.getElementById('content-root'), 0);
+            let routers = urlFormat(window.location.href).router;
+            this.pagename = routers[0] in pages ? routers[0] : 'home';
+            this.loadPage();
         },
         component: {
             uiSearch
@@ -60,131 +60,50 @@
 <style>
     [quickpaper] {
 
+        &>header {
+            font-size: 30px;
+            font-weight: 800;
+            color: #989a94;
+            font-family: serif;
+            background-image: url('./asset/logo.png');
+            background-repeat: no-repeat;
+            background-position: 60px center;
+            background-size: auto 90%;
+            padding-left: 140px;
+            padding-right: 20px;
+            line-height: 74px;
+            height: 74px;
+            background-color: white;
+
+            &>span {
+                float: right;
+                line-height: 1em;
+                margin-top: 16px;
+            }
+        }
+
+        &>nav {
+            background-color: #3c7c78;
+            color: white;
+            padding-left: 50px;
+
+            &>span {
+                margin: 0 5px;
+                padding: 0 10px;
+                line-height: 34px;
+                display: inline-block;
+                font-size: 12px;
+                cursor: pointer;
+
+                &[active='yes'] {
+                    background-color: #285f5b;
+                }
+            }
+        }
+
         &>div {
-            height: 100vh;
-            vertical-align: top;
-            display: inline-block;
-
-            &.menu {
-                width: 70px;
-                background-color: #303435;
-                text-align: center;
-                color: white;
-
-                &>h2 {
-                    font-size: 12px;
-                    background-image: url('./asset/logo.png');
-                    padding-top: 70px;
-                    background-size: 90% auto;
-                    background-position: center top;
-                    background-repeat: no-repeat;
-                    font-weight: 800;
-                    margin-top: 10px;
-                }
-
-                &>ul {
-                    margin-top: 30px;
-
-                    &>li {
-                        background-color: #fefefe;
-                        color: #303435;
-                        margin: 7px;
-                        margin-top: 10px;
-                        padding: 3px 0;
-                        font-size: 12px;
-                        cursor: pointer;
-                    }
-                }
-            }
-
-            &.content {
-                width: calc(100vw - 70px);
-                overflow: auto;
-                background-color: rgb(243 240 240);
-
-                &>div {
-                    width: 1000px;
-                    padding: 300px 25px 20px;
-                    margin: auto;
-                    background-image: url('./asset/logo.png');
-                    background-size: auto 300px;
-                    background-repeat: no-repeat;
-                    background-position: center top;
-
-                    &>h3 {
-                        text-align: center;
-                        font-family: serif;
-                        font-weight: 200;
-                    }
-
-                    &>h4 {
-                        font-size: 20px;
-                        line-height: 40px;
-                        margin: 30px 0 10px 0;
-                    }
-
-                    &>ul {
-                        &>li {
-                            cursor: pointer;
-                            display: inline-block;
-                            width: 170px;
-                            height: 200px;
-                            margin: 10px;
-                            background-color: white;
-                            padding: 15px;
-
-                            &:hover {
-                                outline: 2px solid rgb(208, 207, 207);
-
-                            }
-
-                            &>h5 {
-                                font-size: 14px;
-                                line-height: 1.6em;
-                                color: #24584f;
-                                font-weight: 800;
-                            }
-
-                            &>div {
-                                font-size: 12px;
-                                line-height: 2em;
-                                padding-top: 10px;
-                            }
-                        }
-                    }
-
-                }
-            }
-
-            &>footer {
-                text-align: center;
-                padding: 10px 0 20px 0;
-                min-width: 1000px;
-
-                &>p {
-                    line-height: 40px;
-                    height: 40px;
-                    color: gray;
-                    font-size: 14px;
-                }
-
-                &>a {
-                    display: inline-block;
-                    padding: 0 15px;
-                    line-height: 30px;
-                    height: 30px;
-                    color: #999999;
-                    font-size: 12px;
-                    border: 1px solid #E3E3E5;
-                    border-radius: 45px;
-
-                    &:hover {
-                        color: gray;
-                        font-weight: 800;
-                        border-color: gray;
-                    }
-                }
-            }
+            min-height: calc(100vh - 205px);
+            padding: 0 60px 0 70px;
         }
     }
 </style>

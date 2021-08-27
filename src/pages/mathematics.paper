@@ -1,0 +1,12 @@
+<template class='book-list'>
+    <ul>
+        <li @click='loadPage("https://knowpedia.github.io/Higher-Algebra/")'>
+            <h5>
+                《高等代数》
+            </h5>
+            <div>
+                包括行列式和矩阵、线性方程组、线性空间和线性变换、欧几里得空间、双线性函数与辛空间等代数基础知识。
+            </div>
+        </li>
+    </ul>
+</template>
