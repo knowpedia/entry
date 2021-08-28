@@ -102,8 +102,8 @@
         }
 
         &>div {
-            min-height: calc(100vh - 205px);
-            padding: 0 60px 0 70px;
+            min-height: calc(100vh - 108px);
+            padding: 0 70px 0 70px;
         }
     }
 </style>

@@ -40,3 +40,12 @@ let pagename = urlFormat(window.location.href).router[0];
     });
 
 });
+
+import helper from './helper.paper';
+
+// 启动辅助页面
+
+new Knowpedia({
+    el: document.getElementById('sub-root'),
+    render: createElement => createElement(helper)
+});
