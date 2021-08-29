@@ -7,29 +7,25 @@
             cursor: pointer;
             display: inline-block;
             width: 170px;
-            height: 200px;
+            height: 250px;
             margin: 10px;
             background-color: #ececec;
             padding: 15px;
-            font-weight: 400;
+            font-size: 0;
+            background-size: auto 100%;
+            background-position: center;
+            background-repeat: no-repeat;
 
             &:hover {
-                box-shadow: 2px 3px 9px 0px #c8b3b3;
+                box-shadow: 2px 3px 9px 0px #a19696;
                 outline: 1px solid white;
             }
 
-            &>h5 {
-                font-size: 14px;
-                line-height: 1.6em;
-                color: #f96c58;
-                font-weight: 800;
+            // 高等代数
+            &.Higher-Algebra {
+                background-image: url('../asset/Higher-Algebra.png');
             }
 
-            &>div {
-                font-size: 12px;
-                line-height: 2em;
-                padding-top: 10px;
-            }
         }
     }
 }
