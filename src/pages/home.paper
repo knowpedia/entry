@@ -1,3 +1,162 @@
 <template>
-
+    <header>
+        <div class="left">
+            <div class="title">
+                你好2007
+                <span>@hai2007</span>
+            </div>
+            <div class="belief">
+                走一步，再走一步。
+            </div>
+            <a class="link" href='https://hai2007.gitee.io/sweethome/' target="_blank">
+                今天，你学习了吗？
+            </a>
+        </div>
+        <div class="right">
+            <p>
+                我们都是光着身子的来，又光着身子的走，什么也没有带来，最后，什么也带不走。而随着时间的推移，在足够大的时间跨度里，我们的存在便更显微不足道。
+            </p>
+            <p>
+                所以，读书的意义到底是什么？我不禁开始反思。
+            </p>
+            <p>
+                可是，我好像开始明白了，当我开始反思的时候，读书的意义便有了。是呀，我们不过是一根会思考的芦苇，可是，我们是会思考的芦苇。
+            </p>
+        </div>
+    </header>
+    <div class="read-book">
+        <h2>读书笔记</h2>
+        <ul>
+            <li @click='loadPage("#/mathematics")' class='mathematics'>
+                数学
+            </li>
+        </ul>
+    </div>
 </template>
+<style>
+    [quickpaper] {
+        &>header {
+            text-align: center;
+
+            &>div {
+                display: inline-block;
+                vertical-align: top;
+
+                &.left {
+
+                    width: 300px;
+
+                    &>.title {
+                        padding-top: 200px;
+                        background-image: url('../asset/girl-hai2007.png');
+                        background-repeat: no-repeat;
+                        background-position: center 30px;
+                        font-size: 20px;
+                        font-weight: 800;
+
+                        &>span {
+                            display: block;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 2em;
+                        }
+                    }
+
+                    &>.belief {
+                        line-height: 2em;
+                        color: gray;
+                    }
+
+                    &>.link {
+                        color: rgb(90, 86, 86);
+                        border: 1px solid rgb(202, 199, 199);
+                        padding: 5px 10px;
+                        display: inline-block;
+                        cursor: pointer;
+                        user-select: none;
+                        margin-top: 10px;
+
+                        &:hover {
+                            text-decoration: underline;
+                            color: rgb(245, 12, 12);
+                            border-color: rgb(236, 49, 49);
+                        }
+                    }
+
+                }
+
+                &.right {
+                    width: 700px;
+                    margin-top: 70px;
+                    padding: 30px;
+                    background-color: #fbfbfb;
+
+                    &>p {
+                        text-align: left;
+                        text-indent: 2em;
+                        line-height: 1.6em;
+                        margin-top: 10px;
+                        font-family: serif;
+                        font-weight: 800;
+                        color: #4c4a4a;
+                    }
+                }
+            }
+        }
+
+        /* 读书笔记 */
+        &>.read-book {
+            padding-top: 100px;
+            text-align: center;
+
+            &>h2 {
+
+                position: relative;
+
+                &::before,
+                &::after {
+                    content: " ";
+                    display: block;
+                    height: 1px;
+                    background-color: #e4dede;
+                    width: calc(50% - 400px);
+                    position: absolute;
+                    top: 50%;
+                }
+
+                &::before {
+                    right: calc(50% + 70px);
+                }
+
+                &::after {
+                    left: calc(50% + 70px);
+                }
+            }
+
+            &>ul {
+                padding: 30px;
+
+                &>li {
+                    display: inline-block;
+                    width: 160px;
+                    height: 200px;
+                    cursor: pointer;
+                    background-repeat: no-repeat;
+                    margin: 20px;
+                    font-size: 0;
+                    border: 1px solid white;
+
+                    &:hover {
+                        box-shadow: 2px 3px 9px 0px #d8d5d5;
+                    }
+
+                    /* 数学 */
+                    &.mathematics {
+                        background-image: url('../asset/mathematics.jpg');
+                    }
+                }
+            }
+        }
+
+    }
+</style>
