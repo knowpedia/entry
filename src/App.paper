@@ -12,6 +12,9 @@
         <span @click='changeNav("mathematics")' :active='pagename=="mathematics"?"yes":"no"'>
             数学
         </span>
+        <span @click='changeNav("english")' :active='pagename=="english"?"yes":"no"'>
+            英语
+        </span>
     </nav>
     <div>
         <component :is='page'></component>
@@ -22,7 +25,8 @@
     import urlFormat from './services/urlFormat.js';
     let pages = {
         home: () => import('./pages/home.paper'),
-        mathematics: () => import('./pages/mathematics.paper')
+        mathematics: () => import('./pages/mathematics.paper'),
+        english: () => import('./pages/english.paper')
     };
     export default {
         data() {

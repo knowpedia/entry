@@ -9,21 +9,36 @@
             width: 170px;
             height: 250px;
             margin: 10px;
-            background-color: #ececec;
             padding: 15px;
             font-size: 0;
-            background-size: auto 100%;
+            background-size: auto 90%;
             background-position: center;
             background-repeat: no-repeat;
+            transition-property: background-size;
+            transition-duration: 200ms;
 
             &:hover {
-                box-shadow: 2px 3px 9px 0px #a19696;
-                outline: 1px solid white;
+                background-size: auto 100%;
             }
 
             // 高等代数
             &.Higher-Algebra {
                 background-image: url('../asset/Higher-Algebra.png');
+            }
+
+            // 数学分析
+            &.Mathematical-Analysis{
+                background-image: url('../asset/Mathematical-Analysis.png');
+            }
+
+            // 概率论与数理统计
+            &.Probability-Theory-And-Mathematical-Statistics{
+                background-image: url('../asset/Probability-Theory-And-Mathematical-Statistics.png');
+            }
+
+            // 英语语法
+            &.English-Grammar{
+                background-image: url('../asset/English-Grammar.png');
             }
 
         }

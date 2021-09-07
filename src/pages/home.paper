@@ -30,6 +30,9 @@
             <li @click='loadPage("#/mathematics")' class='mathematics'>
                 数学
             </li>
+            <li @click='loadPage("#/english")' class='english'>
+                英语
+            </li>
         </ul>
     </div>
 </template>
@@ -153,6 +156,11 @@
                     /* 数学 */
                     &.mathematics {
                         background-image: url('../asset/mathematics.jpg');
+                    }
+
+                      /* 英语 */
+                      &.english {
+                        background-image: url('../asset/english.jpg');
                     }
                 }
             }
