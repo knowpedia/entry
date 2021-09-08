@@ -27,11 +27,21 @@
     <div class="read-book">
         <h2>读书笔记</h2>
         <ul>
-            <li @click='loadPage("#/mathematics")' class='mathematics'>
-                数学
+            <li class='mathematics' @click='loadPage("#/mathematics")'>
+                <h3>
+                    数学
+                </h3>
+                <span title='点击我打开数学读书笔记系列书籍'>
+                    打开
+                </span>
             </li>
-            <li @click='loadPage("#/english")' class='english'>
-                英语
+            <li class='english' @click='loadPage("#/english")'>
+                <h3>
+                    英语
+                </h3>
+                <span title='点击我打开英语读书笔记系列书籍'>
+                    打开
+                </span>
             </li>
         </ul>
     </div>
@@ -99,7 +109,7 @@
                         text-indent: 2em;
                         line-height: 1.6em;
                         margin-top: 10px;
-                        font-family: serif;
+                        font-family: cursive;
                         font-weight: 800;
                         color: #4c4a4a;
                     }
@@ -115,6 +125,8 @@
             &>h2 {
 
                 position: relative;
+                color: #795548;
+                font-weight: 400;
 
                 &::before,
                 &::after {
@@ -122,7 +134,7 @@
                     display: block;
                     height: 1px;
                     background-color: #e4dede;
-                    width: calc(50% - 400px);
+                    width: calc(50% - 100px);
                     position: absolute;
                     top: 50%;
                 }
@@ -143,24 +155,50 @@
                     display: inline-block;
                     width: 160px;
                     height: 200px;
-                    cursor: pointer;
-                    background-repeat: no-repeat;
+                    text-align: center;
                     margin: 20px;
-                    font-size: 0;
                     border: 1px solid white;
+                    box-shadow: 2px 3px 9px 0px #d8d5d5;
+                    font-family: cursive;
+                    vertical-align: top;
+                    cursor: pointer;
 
                     &:hover {
-                        box-shadow: 2px 3px 9px 0px #d8d5d5;
+                        box-shadow: 2px 3px 9px 4px #a9a4a4;
+                    }
+
+                    &>h3 {
+                        line-height: 100px;
+                        font-size: 30px;
+                    }
+
+                    &>span {
+                        display: inline-block;
+                        padding: 5px 40px;
+                        font-size: 16px;
+                        margin-top: 30px;
+                        background-color: #ffffff;
+                        color: #2196f3;
+                        font-weight: 800;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
 
                     /* 数学 */
                     &.mathematics {
-                        background-image: url('../asset/mathematics.jpg');
+                        background: #7F7FD5;
+                        background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+                        background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+
                     }
 
-                      /* 英语 */
-                      &.english {
-                        background-image: url('../asset/english.jpg');
+                    /* 英语 */
+                    &.english {
+                        background: #ee9ca7;
+                        background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
+                        background: linear-gradient(to right, #ffdde1, #ee9ca7);
                     }
                 }
             }

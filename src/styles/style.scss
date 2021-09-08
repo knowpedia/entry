@@ -27,20 +27,51 @@
             }
 
             // 数学分析
-            &.Mathematical-Analysis{
+            &.Mathematical-Analysis {
                 background-image: url('../asset/Mathematical-Analysis.png');
             }
 
             // 概率论与数理统计
-            &.Probability-Theory-And-Mathematical-Statistics{
+            &.Probability-Theory-And-Mathematical-Statistics {
                 background-image: url('../asset/Probability-Theory-And-Mathematical-Statistics.png');
             }
 
             // 英语语法
-            &.English-Grammar{
+            &.English-Grammar {
                 background-image: url('../asset/English-Grammar.png');
             }
 
+        }
+    }
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 10px 0 20px 0;
+    min-width: 1100px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px -5px 2px;
+
+    &>p {
+        line-height: 40px;
+        height: 40px;
+        color: gray;
+        font-size: 14px;
+    }
+
+    &>a {
+        display: inline-block;
+        padding: 0 15px;
+        line-height: 30px;
+        height: 30px;
+        color: #999999;
+        font-size: 12px;
+        border: 1px solid #E3E3E5;
+        border-radius: 45px;
+
+        &:hover {
+            border: 1px solid #0a93e2;
+            color: #0a93e2;
         }
     }
 }
