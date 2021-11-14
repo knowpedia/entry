@@ -15,6 +15,9 @@
         <span @click='changeNav("english")' :active='pagename=="english"?"yes":"no"'>
             英语
         </span>
+        <span @click='changeNav("economics")' :active='pagename=="economics"?"yes":"no"'>
+            经济学
+        </span>
     </nav>
     <div>
         <component :is='page'></component>
@@ -26,7 +29,8 @@
     let pages = {
         home: () => import('./pages/home.paper'),
         mathematics: () => import('./pages/mathematics.paper'),
-        english: () => import('./pages/english.paper')
+        english: () => import('./pages/english.paper'),
+        economics: () => import('./pages/economics.paper')
     };
     export default {
         data() {

@@ -43,6 +43,14 @@
                     打开
                 </span>
             </li>
+            <li class='economics' @click='loadPage("#/economics")'>
+                <h3>
+                    经济学
+                </h3>
+                <span title='点击我打开经济学读书笔记系列书籍'>
+                    打开
+                </span>
+            </li>
         </ul>
     </div>
 </template>
@@ -199,6 +207,13 @@
                         background: #ee9ca7;
                         background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
                         background: linear-gradient(to right, #ffdde1, #ee9ca7);
+                    }
+
+                    /* 经济学 */
+                    &.economics {
+                        background: #607d8b;
+                        background: -webkit-linear-gradient(to right, #9e9e9e, #607d8b);
+                        background: linear-gradient(to right, #9e9e9e, #607d8b);
                     }
                 }
             }

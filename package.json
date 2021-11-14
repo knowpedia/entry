@@ -1,11 +1,11 @@
 {
   "name": "knowpedia-entry",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "知识百科全书，各种专业知识的免费共享平台。",
   "scripts": {
     "start": "npm install && npm run dev",
     "dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "hai2007_nodejs -d ./dist && webpack --config webpack.prod.js"
+    "build": "nodejs -d ./dist && webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -31,7 +31,7 @@
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "@hai2007/algorithm": "^0.6.2",
-    "@hai2007/nodejs": "^1.0.1",
+    "@hai2007/nodejs": "^2.0.1",
     "autoprefixer": "^9.7.1",
     "babel-loader": "^8.1.0",
     "css-loader": "^2.1.1",
