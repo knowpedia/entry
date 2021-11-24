@@ -27,10 +27,17 @@
     import uiSearch from './components/ui-search.paper';
     import urlFormat from './services/urlFormat.js';
     let pages = {
+
         home: () => import('./pages/home.paper'),
+
+        // 读书笔记
         mathematics: () => import('./pages/mathematics.paper'),
         english: () => import('./pages/english.paper'),
-        economics: () => import('./pages/economics.paper')
+        economics: () => import('./pages/economics.paper'),
+
+        // 速查表
+        "Trigonometric-Function-Table": () => import('./pages/Quick-List/Trigonometric-Function-Table.paper')
+
     };
     export default {
         data() {

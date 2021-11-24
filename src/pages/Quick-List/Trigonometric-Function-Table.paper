@@ -1,0 +1,67 @@
+<template class='doc-view'>
+    <h2 id="fixed-top">常用三角函数变换公式</h2>
+    <ul>
+        <li>
+            sinαsinβ=-
+            <span kp-math-formula="mathFormulas[0]"></span>[cos(α+β)-cos(α-β)]
+        </li>
+        <li>
+            cosαcosβ=
+            <span kp-math-formula="mathFormulas[0]"></span>[cos(α+β)+cos(α-β)]
+        </li>
+        <li>
+            sinαcosβ=
+            <span kp-math-formula="mathFormulas[0]"></span>[sin(α+β)+sin(α-β)]
+        </li>
+        <li>
+            cosαsinβ=
+            <span kp-math-formula="mathFormulas[0]"></span>[sin(α+β)-sin(α-β)]
+        </li>
+        <li>
+            sinθ+sinφ=2sin
+            <span kp-math-formula="mathFormulas[1]"></span>
+            cos<span kp-math-formula="mathFormulas[2]"></span>
+        </li>
+        <li>
+            sinθ-sinφ=2cos
+            <span kp-math-formula="mathFormulas[1]"></span>
+            sin<span kp-math-formula="mathFormulas[2]"></span>
+        </li>
+        <li>
+            cosθ+cosφ=2cos
+            <span kp-math-formula="mathFormulas[1]"></span>
+            cos<span kp-math-formula="mathFormulas[2]"></span>
+        </li>
+        <li>
+            cosθ-cosφ=-2sin
+            <span kp-math-formula="mathFormulas[1]"></span>
+            sin<span kp-math-formula="mathFormulas[2]"></span>
+        </li>
+    </ul>
+</template>
+<script>
+    export default {
+        data() {
+            return {
+                mathFormulas: {}
+            };
+        },
+        mounted() {
+            this.mathFormulas = [
+                this.$mathFormula.division(1, 2),
+                this.$mathFormula.division('θ+φ', 2),
+                this.$mathFormula.division('θ-φ', 2)
+            ];
+        },
+    };
+</script>
+<style>
+    ul {
+        padding: 10px;
+
+        li {
+            display: inline-block;
+            margin: 20px;
+        }
+    }
+</style>

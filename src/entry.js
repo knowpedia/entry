@@ -5,6 +5,7 @@ import '@hai2007/polyfill/Promise.js';
 
 // 引入样式
 import "@hai2007/style/normalize.css";
+import "@hai2007/style/doc-view.css";
 import "./styles/style.scss";
 
 import urlFormat from './services/urlFormat';
