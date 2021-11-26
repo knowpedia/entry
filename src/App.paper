@@ -18,6 +18,9 @@
         <span @click='changeNav("economics")' :active='pagename=="economics"?"yes":"no"'>
             经济学
         </span>
+        <span @click='changeNav("computer")' :active='pagename=="computer"?"yes":"no"'>
+            计算机
+        </span>
     </nav>
     <div>
         <component :is='page'></component>
@@ -34,6 +37,7 @@
         mathematics: () => import('./pages/mathematics.paper'),
         english: () => import('./pages/english.paper'),
         economics: () => import('./pages/economics.paper'),
+        computer: () => import('./pages/computer.paper'),
 
         // 速查表
         "Trigonometric-Function-Table": () => import('./pages/Quick-List/Trigonometric-Function-Table.paper')

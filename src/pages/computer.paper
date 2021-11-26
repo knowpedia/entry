@@ -1,0 +1,7 @@
+<template class='book-list'>
+    <ul>
+        <li @click='loadPage("https://knowpedia.github.io/Algorithm-Design-And-Analysis/")' class='Algorithm-Design-And-Analysis'>
+            算法设计与分析
+        </li>
+    </ul>
+</template>
