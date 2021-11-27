@@ -1,3 +1,76 @@
 <template>
 
+    <!-- 快速跳转 -->
+    <div class="Qlink">
+        <a target='_blank' href="https://github.com/knowpedia/entry/issues">联系我们</a>
+        <a target='_blank' href="https://github.com/knowpedia">仓库</a>
+        <a target='_blank' href="https://github.com/hai2007">github</a>
+
+        <!-- 个人主页 -->
+        <a class='single' target='_blank' href="https://hai2007.gitee.io/sweethome/">甜蜜的家</a>
+    </div>
+
 </template>
+<style>
+    [quickpaper] {
+        &>div {
+            position: fixed;
+
+            &.Qlink {
+                right: 10px;
+                top: 200px;
+                width: 48px;
+                border-radius: 24px;
+                background: #fff;
+                box-shadow: 0 2px 15px 0 rgb(0 0 0 / 10%);
+                font-size: 0;
+                padding: 10px 0;
+
+                &>a {
+                    width: 26px;
+                    height: 40px;
+                    margin: 0 11px;
+                    display: inline-block;
+                    font-size: 0;
+                    background-size: 100% auto;
+                    background-repeat: no-repeat;
+                    background-position: center;
+
+                    &:hover {
+                        background-size: 110% auto;
+                    }
+
+                    &:nth-child(1) {
+                        background-image: url('./asset/icon-1.png');
+                        border-bottom: 1px solid #7c7c7c;
+                    }
+
+                    &:nth-child(2) {
+                        background-image: url('./asset/icon-3.png');
+                        border-bottom: 1px solid #7c7c7c;
+                    }
+
+                    &:nth-child(3) {
+                        background-image: url('./asset/icon-2.png');
+                    }
+
+                    &.single {
+                        position: absolute;
+                        top: 180px;
+                        left: -11px;
+                        height: 115px;
+                        line-height: 1.5em;
+                        width: 48px;
+                        font-size: 14px;
+                        text-align: center;
+                        color: white;
+                        background-color: aqua;
+                        padding: 14px;
+                        border-radius: 24px;
+                        background-image: url('./asset/Qlink-bg.png');
+                    }
+                }
+            }
+        }
+    }
+</style>

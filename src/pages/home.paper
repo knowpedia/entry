@@ -55,7 +55,7 @@
                 <h3>
                     计算机
                 </h3>
-                <span title='点击我打开计算机读书笔记系列书籍'>
+                <span title='点击我打开计算机或编程读书笔记系列书籍'>
                     打开
                 </span>
             </li>
@@ -213,30 +213,30 @@
                     /* 数学 */
                     &.mathematics {
                         background: #7F7FD5;
-                        background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
-                        background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+                        background: -webkit-linear-gradient(to right, #d7f7f4, #7F7FD5);
+                        background: linear-gradient(to right, #d7f7f4, #7F7FD5);
 
                     }
 
                     /* 英语 */
                     &.english {
-                        background: #ee9ca7;
-                        background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
-                        background: linear-gradient(to right, #ffdde1, #ee9ca7);
+                        background: #ff9800;
+                        background: -webkit-linear-gradient(to right, #fff2f3, #ff9800);
+                        background: linear-gradient(to right, #fff2f3, #ff9800);
                     }
 
                     /* 经济学 */
                     &.economics {
                         background: #607d8b;
-                        background: -webkit-linear-gradient(to right, #9e9e9e, #607d8b);
-                        background: linear-gradient(to right, #9e9e9e, #607d8b);
+                        background: -webkit-linear-gradient(to right, #e6dfdf, #607d8b);
+                        background: linear-gradient(to right, #e6dfdf, #607d8b);
                     }
 
                     /* 计算机 */
                     &.computer {
                         background: #f70202;
-                        background: -webkit-linear-gradient(to right, #ebaaaa, #f70202);
-                        background: linear-gradient(to right, #ebaaaa, #f70202);
+                        background: -webkit-linear-gradient(to right, #f8dcdc, #f70202);
+                        background: linear-gradient(to right, #f8dcdc, #f70202);
                     }
                 }
             }
