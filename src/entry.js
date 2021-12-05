@@ -1,4 +1,7 @@
-import Knowpedia from 'knowpedia';
+import QuickPaper from 'quick-paper';
+import mathFormula from 'knowpedia/mathFormula';
+
+QuickPaper.use(mathFormula);
 
 // 兼容文件
 import '@hai2007/polyfill/Promise.js';
@@ -16,7 +19,7 @@ let pages = {
 };
 
 // 打开新页面
-Knowpedia.prototype.loadPage = url => {
+QuickPaper.prototype.loadPage = url => {
     let aDom = document.createElement('a');
     aDom.setAttribute('href', url);
     aDom.setAttribute('target', '_blank');
@@ -30,7 +33,7 @@ let pagename = urlFormat(window.location.href).router[0];
 (pagename in pages ? pages[pagename] : pages.app)().then(data => {
 
     // 创建对象
-    window.knowpedia = new Knowpedia({
+    window.quickPaper = new QuickPaper({
 
         // 挂载点
         el: document.getElementById('root'),
@@ -46,7 +49,7 @@ import helper from './helper.paper';
 
 // 启动辅助页面
 
-new Knowpedia({
+new QuickPaper({
     el: document.getElementById('sub-root'),
     render: createElement => createElement(helper)
 });

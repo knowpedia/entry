@@ -10,6 +10,14 @@
         <a class='single' target='_blank' href="https://hai2007.gitee.io/sweethome/">甜蜜的家</a>
     </div>
 
+    <!-- 速查表 -->
+    <div class="Qsearch">
+        <span class='icon'></span>
+        <div>
+            <a href="#/Trigonometric-Function-Table" target="_blank">常用三角函数变换公式</a>
+        </div>
+    </div>
+
 </template>
 <style>
     [quickpaper] {
@@ -68,6 +76,75 @@
                         padding: 14px;
                         border-radius: 24px;
                         background-image: url('./asset/Qlink-bg.png');
+                    }
+                }
+            }
+
+            &.Qsearch {
+                position: fixed;
+                top: 200px;
+
+                &::before,
+                &::after {
+                    background-color: white;
+                    content: " ";
+                    width: 20px;
+                    height: 20px;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    left: 62px;
+                    top: 14px;
+                    display: none;
+                }
+
+                &::before {
+                    z-index: 1;
+                    box-shadow: 0 0 8px 0px #c8dad9;
+                }
+
+                &::after {
+                    z-index: 3;
+                }
+
+                &:hover {
+
+                    &::before,
+                    &::after,
+                    &>div {
+                        display: block;
+                    }
+                }
+
+                &>.icon {
+                    display: inline-block;
+                    height: 50px;
+                    width: 100px;
+                    background-image: url(./asset/logo.png);
+                    background-size: auto 90%;
+                    background-repeat: no-repeat;
+                    background-position: 5px center;
+                    cursor: pointer;
+                }
+
+                &>div {
+                    position: absolute;
+                    background-color: white;
+                    z-index: 2;
+                    top: 0;
+                    left: 70px;
+                    width: 160px;
+                    box-shadow: 0 0 8px 0px #c8dad9;
+                    padding: 10px;
+                    display: none;
+
+                    &>a {
+                        font-size: 12px;
+                        display: block;
+                        padding: 10px;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
