@@ -34,8 +34,28 @@
         </a>
     </footer>
 
-    <!-- 打包文件 -->
-    <script src="./dist/main@v0.5.1.js"></script>
+    <!-- 引入打包文件 -->
+    <script>
+
+        var host = window.location.host;
+
+        // 获取head标签
+        var head = document.getElementsByTagName('head')[0];
+
+        // 创建script
+        var script = document.createElement('script');
+
+        // 设置属性
+        script.src = "./build/main@v0.5.1.js";
+
+        if (/^127\.0\.0\.1/.test(host) || /^localhost/.test(host)) {
+            script.type = 'module';
+        }
+
+        // 追加到页面
+        head.appendChild(script);
+
+    </script>
 
 
     <!-- 辅助记录访问次数 -->

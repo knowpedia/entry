@@ -43,14 +43,6 @@
                     打开
                 </span>
             </li>
-            <li class='economics' @click='loadPage("#/economics")'>
-                <h3>
-                    经济学
-                </h3>
-                <span title='点击我打开经济学读书笔记系列书籍'>
-                    打开
-                </span>
-            </li>
             <li class='computer' @click='loadPage("#/computer")'>
                 <h3>
                     计算机
@@ -77,7 +69,7 @@
 
                     &>.title {
                         padding-top: 200px;
-                        background-image: url('../asset/girl-hai2007.png');
+                        background-image: url('./image/girl-hai2007.png');
                         background-repeat: no-repeat;
                         background-position: center 30px;
                         font-size: 20px;
@@ -215,13 +207,6 @@
                         background: #ff9800;
                         background: -webkit-linear-gradient(to right, #fff2f3, #ff9800);
                         background: linear-gradient(to right, #fff2f3, #ff9800);
-                    }
-
-                    /* 经济学 */
-                    &.economics {
-                        background: #607d8b;
-                        background: -webkit-linear-gradient(to right, #e6dfdf, #607d8b);
-                        background: linear-gradient(to right, #e6dfdf, #607d8b);
                     }
 
                     /* 计算机 */

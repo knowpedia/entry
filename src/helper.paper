@@ -49,17 +49,17 @@
                     }
 
                     &:nth-child(1) {
-                        background-image: url('./asset/icon-1.png');
+                        background-image: url('./image/icon-1.png');
                         border-bottom: 1px solid #7c7c7c;
                     }
 
                     &:nth-child(2) {
-                        background-image: url('./asset/icon-3.png');
+                        background-image: url('./image/icon-3.png');
                         border-bottom: 1px solid #7c7c7c;
                     }
 
                     &:nth-child(3) {
-                        background-image: url('./asset/icon-2.png');
+                        background-image: url('./image/icon-2.png');
                     }
 
                     &.single {
@@ -75,7 +75,7 @@
                         background-color: aqua;
                         padding: 14px;
                         border-radius: 24px;
-                        background-image: url('./asset/Qlink-bg.png');
+                        background-image: url('./image/Qlink-bg.png');
                     }
                 }
             }
@@ -119,7 +119,7 @@
                     display: inline-block;
                     height: 50px;
                     width: 100px;
-                    background-image: url(./asset/logo.png);
+                    background-image: url(./image/logo.png);
                     background-size: auto 90%;
                     background-repeat: no-repeat;
                     background-position: 5px center;

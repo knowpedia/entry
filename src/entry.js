@@ -1,5 +1,5 @@
 import QuickPaper from 'quick-paper';
-import mathFormula from 'knowpedia/mathFormula';
+import mathFormula from 'knowpedia/mathFormula/index';
 
 QuickPaper.use(mathFormula);
 

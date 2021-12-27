@@ -15,9 +15,6 @@
         <span @click='changeNav("english")' :active='pagename=="english"?"yes":"no"'>
             英语
         </span>
-        <span @click='changeNav("economics")' :active='pagename=="economics"?"yes":"no"'>
-            经济学
-        </span>
         <span @click='changeNav("computer")' :active='pagename=="computer"?"yes":"no"'>
             计算机
         </span>
@@ -36,7 +33,6 @@
         // 读书笔记
         mathematics: () => import('./pages/mathematics.paper'),
         english: () => import('./pages/english.paper'),
-        economics: () => import('./pages/economics.paper'),
         computer: () => import('./pages/computer.paper'),
 
         // 速查表
@@ -80,7 +76,7 @@
             font-weight: 800;
             color: #989a94;
             font-family: serif;
-            background-image: url('./asset/logo.png');
+            background-image: url('./image/logo.png');
             background-repeat: no-repeat;
             background-position: 60px center;
             background-size: auto 90%;
