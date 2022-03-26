@@ -18,7 +18,7 @@ __etcpack__scope_args__=window.__etcpack__getBundle('40');
 
     script.render=function(createElement){
 
-        return createElement('div',{"quickpaper":"","data-quickpaper-347ecaca":""},[createElement('header',{"data-quickpaper-347ecaca":""},["Knowpedia",createElement('span',{"data-quickpaper-347ecaca":""},[createElement('ui-search',{"data-quickpaper-347ecaca":""},[])])]),createElement('nav',{"data-quickpaper-347ecaca":""},[createElement('span',{"@click":"changeNav(\"home\")",":active":"pagename==\"home\"?\"yes\":\"no\"","data-quickpaper-347ecaca":""},["首页"]),createElement('span',{"@click":"changeNav(\"mathematics\")",":active":"pagename==\"mathematics\"?\"yes\":\"no\"","data-quickpaper-347ecaca":""},["数学"]),createElement('span',{"@click":"changeNav(\"english\")",":active":"pagename==\"english\"?\"yes\":\"no\"","data-quickpaper-347ecaca":""},["英语"]),createElement('span',{"@click":"changeNav(\"computer\")",":active":"pagename==\"computer\"?\"yes\":\"no\"","data-quickpaper-347ecaca":""},["计算机"])]),createElement('div',{"data-quickpaper-347ecaca":""},[createElement('component',{":is":"page","data-quickpaper-347ecaca":""},[])])])
+        return createElement('div',{"quickpaper":"","data-quickpaper-347ecaca":""},[createElement('header',{"data-quickpaper-347ecaca":""},["Knowpedia",createElement('div',{"data-quickpaper-347ecaca":""},["本网站是为了方便日常查询，内容比较随意，你可以",createElement('a',{"href":"https://github.com/knowpedia/entry/issues","target":"_blank","data-quickpaper-347ecaca":""},["加入我们"]),"一起整理～"]),createElement('span',{"data-quickpaper-347ecaca":""},[createElement('ui-search',{"data-quickpaper-347ecaca":""},[])])]),createElement('nav',{"data-quickpaper-347ecaca":""},[createElement('span',{"@click":"changeNav(\"home\")",":active":"pagename==\"home\"?\"yes\":\"no\"","data-quickpaper-347ecaca":""},["首页"]),createElement('span',{"@click":"changeNav(\"mathematics\")",":active":"pagename==\"mathematics\"?\"yes\":\"no\"","data-quickpaper-347ecaca":""},["数学"]),createElement('span',{"@click":"changeNav(\"english\")",":active":"pagename==\"english\"?\"yes\":\"no\"","data-quickpaper-347ecaca":""},["英语"]),createElement('span',{"@click":"changeNav(\"computer\")",":active":"pagename==\"computer\"?\"yes\":\"no\"","data-quickpaper-347ecaca":""},["计算机"])]),createElement('div',{"data-quickpaper-347ecaca":""},[createElement('component',{":is":"page","data-quickpaper-347ecaca":""},[])])])
 
     };
 
@@ -42,15 +42,15 @@ var urlFormat =__etcpack__scope_args__.default;
 
     let pages = {
 
-        home: () => window.__etcpack__getLazyBundle('./build/main@v0.5.1-bundle2.js','35'),
+        home: () => window.__etcpack__getLazyBundle('./build/main@v0.5.2-bundle2.js','35'),
 
         // 读书笔记
-        mathematics: () => window.__etcpack__getLazyBundle('./build/main@v0.5.1-bundle3.js','36'),
-        english: () => window.__etcpack__getLazyBundle('./build/main@v0.5.1-bundle4.js','37'),
-        computer: () => window.__etcpack__getLazyBundle('./build/main@v0.5.1-bundle5.js','38'),
+        mathematics: () => window.__etcpack__getLazyBundle('./build/main@v0.5.2-bundle3.js','36'),
+        english: () => window.__etcpack__getLazyBundle('./build/main@v0.5.2-bundle4.js','37'),
+        computer: () => window.__etcpack__getLazyBundle('./build/main@v0.5.2-bundle5.js','38'),
 
         // 速查表
-        "Trigonometric-Function-Table": () => window.__etcpack__getLazyBundle('./build/main@v0.5.1-bundle6.js','39')
+        "Trigonometric-Function-Table": () => window.__etcpack__getLazyBundle('./build/main@v0.5.2-bundle6.js','39')
 
     };
     __etcpack__scope_bundle__.default= {
@@ -161,7 +161,7 @@ window.__etcpack__bundleSrc__['40']=function(){
     var __etcpack__scope_args__;
     var styleElement = document.createElement('style');
 var head = document.head || document.getElementsByTagName('head')[0];
-styleElement.innerHTML = "\n [quickpaper]>header[data-quickpaper-347ecaca]{\n\nfont-size: 30px;\n\nfont-weight: 800;\n\ncolor: #989a94;\n\nfont-family: serif;\n\nbackground-image: url('./image/logo.png');\n\nbackground-repeat: no-repeat;\n\nbackground-position: 60px center;\n\nbackground-size: auto 90%;\n\npadding-left: 140px;\n\npadding-right: 20px;\n\nline-height: 74px;\n\nheight: 74px;\n\nbackground-color: white;\n\n}\n\n [quickpaper]>header>span[data-quickpaper-347ecaca]{\n\nfloat: right;\n\nline-height: 1em;\n\nmargin-top: 16px;\n\n}\n\n [quickpaper]>nav[data-quickpaper-347ecaca]{\n\nbackground-color: #3c7c78;\n\ncolor: white;\n\npadding-left: 50px;\n\n}\n\n [quickpaper]>nav>span[data-quickpaper-347ecaca]{\n\nmargin: 0 5px;\n\npadding: 0 10px;\n\nline-height: 34px;\n\ndisplay: inline-block;\n\nfont-size: 12px;\n\ncursor: pointer;\n\n}\n\n [quickpaper]>nav>span[active='yes'][data-quickpaper-347ecaca]{\n\nbackground-color: #285f5b;\n\n}\n\n [quickpaper]>div[data-quickpaper-347ecaca]{\n\nmin-height: calc(100vh - 208px);\n\npadding: 0 70px 0 70px;\n\n}\n";
+styleElement.innerHTML = "\n [quickpaper]>header[data-quickpaper-347ecaca]{\n\nfont-size: 30px;\n\nfont-weight: 800;\n\ncolor: #989a94;\n\nfont-family: serif;\n\nbackground-image: url('./image/logo.png');\n\nbackground-repeat: no-repeat;\n\nbackground-position: 60px center;\n\nbackground-size: auto 90%;\n\npadding-left: 140px;\n\npadding-right: 20px;\n\nline-height: 74px;\n\nheight: 74px;\n\nbackground-color: white;\n\nwhite-space: nowrap;\n\n}\n\n [quickpaper]>header>div[data-quickpaper-347ecaca]{\n\ndisplay: inline-block;\n\nfont-size: 16px;\n\nbackground: #4ca6bc;\n\ncolor: white;\n\npadding: 5px 30px;\n\nfont-weight: 200;\n\nfont-family: cursive;\n\nline-height: 2em;\n\nmargin-left: 50px;\n\noutline: 1px dashed #4ca6bc;\n\n}\n\n [quickpaper]>header>div>a[data-quickpaper-347ecaca]{\n\nbackground-color: white;\n\ncolor: #4ca6bc;\n\nmargin: 0 10px;\n\npadding: 5px;\n\n}\n\n [quickpaper]>header>span[data-quickpaper-347ecaca]{\n\nfloat: right;\n\nline-height: 1em;\n\nmargin-top: 16px;\n\n}\n\n [quickpaper]>nav[data-quickpaper-347ecaca]{\n\nbackground-color: #3c7c78;\n\ncolor: white;\n\npadding-left: 50px;\n\n}\n\n [quickpaper]>nav>span[data-quickpaper-347ecaca]{\n\nmargin: 0 5px;\n\npadding: 0 10px;\n\nline-height: 34px;\n\ndisplay: inline-block;\n\nfont-size: 12px;\n\ncursor: pointer;\n\n}\n\n [quickpaper]>nav>span[active='yes'][data-quickpaper-347ecaca]{\n\nbackground-color: #285f5b;\n\n}\n\n [quickpaper]>div[data-quickpaper-347ecaca]{\n\nmin-height: calc(100vh - 208px);\n\npadding: 0 70px 0 70px;\n\n}\n";
 styleElement.setAttribute('type', 'text/css');head.appendChild(styleElement);
   
     return __etcpack__scope_bundle__;

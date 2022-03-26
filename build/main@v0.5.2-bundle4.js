@@ -1,24 +1,24 @@
 
 /*************************** [bundle] ****************************/
-// Original file:./src/pages/computer.paper
+// Original file:./src/pages/english.paper
 /*****************************************************************/
-window.__etcpack__bundleSrc__['38']=function(){
+window.__etcpack__bundleSrc__['37']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
     
 
     // 导入js
-__etcpack__scope_args__=window.__etcpack__getBundle('47');
+__etcpack__scope_args__=window.__etcpack__getBundle('45');
 var script =__etcpack__scope_args__.default;
 
 
     // 导入css
-__etcpack__scope_args__=window.__etcpack__getBundle('48');
+__etcpack__scope_args__=window.__etcpack__getBundle('46');
 
 
     script.render=function(createElement){
 
-        return createElement('div',{"class":"book-list","quickpaper":"","data-quickpaper-0f7591e8":""},[createElement('ul',{"data-quickpaper-0f7591e8":""},[createElement('li',{"@click":"loadPage(\"https://knowpedia.github.io/Algorithm-Design-And-Analysis/\")","class":"Algorithm-Design-And-Analysis","data-quickpaper-0f7591e8":""},["算法设计与分析"])])])
+        return createElement('div',{"class":"book-list","quickpaper":"","data-quickpaper-397815bf":""},[createElement('h2',{"data-quickpaper-397815bf":""},["读书"]),createElement('ul',{"data-quickpaper-397815bf":""},[createElement('li',{"@click":"loadPage(\"https://knowpedia.github.io/English-Grammar/\")","class":"English-Grammar","data-quickpaper-397815bf":""},["英语语法"])]),createElement('h2',{"data-quickpaper-397815bf":""},["笔记"]),createElement('p',{"data-quickpaper-397815bf":""},["暂无内容！"])])
 
     };
 
@@ -29,9 +29,9 @@ __etcpack__scope_args__=window.__etcpack__getBundle('48');
 }
 
 /*************************** [bundle] ****************************/
-// Original file:./src/pages/computer.paper?QuickPaper&type=script&lang=js&hash=0f7591e8
+// Original file:./src/pages/english.paper?QuickPaper&type=script&lang=js&hash=397815bf
 /*****************************************************************/
-window.__etcpack__bundleSrc__['47']=function(){
+window.__etcpack__bundleSrc__['45']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
     __etcpack__scope_bundle__.default= {};
@@ -40,9 +40,9 @@ window.__etcpack__bundleSrc__['47']=function(){
 }
 
 /*************************** [bundle] ****************************/
-// Original file:./src/pages/computer.paper?QuickPaper&type=style&lang=css&hash=0f7591e8
+// Original file:./src/pages/english.paper?QuickPaper&type=style&lang=css&hash=397815bf
 /*****************************************************************/
-window.__etcpack__bundleSrc__['48']=function(){
+window.__etcpack__bundleSrc__['46']=function(){
     var __etcpack__scope_bundle__={};
     var __etcpack__scope_args__;
     var styleElement = document.createElement('style');

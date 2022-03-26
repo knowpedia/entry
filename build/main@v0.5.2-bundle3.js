@@ -18,7 +18,7 @@ __etcpack__scope_args__=window.__etcpack__getBundle('44');
 
     script.render=function(createElement){
 
-        return createElement('div',{"class":"book-list","quickpaper":"","data-quickpaper-442fa7b6":""},[createElement('ul',{"data-quickpaper-442fa7b6":""},[createElement('li',{"@click":"loadPage(\"https://knowpedia.github.io/Higher-Algebra/\")","class":"Higher-Algebra","data-quickpaper-442fa7b6":""},["高等代数"]),createElement('li',{"@click":"loadPage(\"https://knowpedia.github.io/Mathematical-Analysis/\")","class":"Mathematical-Analysis","data-quickpaper-442fa7b6":""},["数学分析"]),createElement('li',{"@click":"loadPage(\"https://knowpedia.github.io/Probability-Theory-And-Mathematical-Statistics/\")","class":"Probability-Theory-And-Mathematical-Statistics","data-quickpaper-442fa7b6":""},["概率论与数理统计"])])])
+        return createElement('div',{"class":"book-list","quickpaper":"","data-quickpaper-442fa7b6":""},[createElement('h2',{"data-quickpaper-442fa7b6":""},["读书"]),createElement('ul',{"data-quickpaper-442fa7b6":""},[createElement('li',{"@click":"loadPage(\"https://knowpedia.github.io/Higher-Algebra/\")","class":"Higher-Algebra","data-quickpaper-442fa7b6":""},["高等代数"]),createElement('li',{"@click":"loadPage(\"https://knowpedia.github.io/Mathematical-Analysis/\")","class":"Mathematical-Analysis","data-quickpaper-442fa7b6":""},["数学分析"]),createElement('li',{"@click":"loadPage(\"https://knowpedia.github.io/Probability-Theory-And-Mathematical-Statistics/\")","class":"Probability-Theory-And-Mathematical-Statistics","data-quickpaper-442fa7b6":""},["概率论与数理统计"])]),createElement('h2',{"data-quickpaper-442fa7b6":""},["笔记"]),createElement('p',{"data-quickpaper-442fa7b6":""},["暂无内容！"])])
 
     };
 

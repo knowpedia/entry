@@ -1,7 +1,16 @@
 <template class='book-list'>
+    <h2>
+        读书
+    </h2>
     <ul>
         <li @click='loadPage("https://knowpedia.github.io/Algorithm-Design-And-Analysis/")' class='Algorithm-Design-And-Analysis'>
             算法设计与分析
         </li>
     </ul>
+    <h2>
+        笔记
+    </h2>
+    <p>
+        暂无内容！
+    </p>
 </template>

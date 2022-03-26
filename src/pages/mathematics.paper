@@ -1,4 +1,7 @@
 <template class='book-list'>
+    <h2>
+        读书
+    </h2>
     <ul>
         <li @click='loadPage("https://knowpedia.github.io/Higher-Algebra/")' class='Higher-Algebra'>
             高等代数
@@ -6,8 +9,15 @@
         <li @click='loadPage("https://knowpedia.github.io/Mathematical-Analysis/")' class='Mathematical-Analysis'>
             数学分析
         </li>
-        <li @click='loadPage("https://knowpedia.github.io/Probability-Theory-And-Mathematical-Statistics/")' class='Probability-Theory-And-Mathematical-Statistics'>
+        <li @click='loadPage("https://knowpedia.github.io/Probability-Theory-And-Mathematical-Statistics/")'
+            class='Probability-Theory-And-Mathematical-Statistics'>
             概率论与数理统计
         </li>
     </ul>
+    <h2>
+        笔记
+    </h2>
+    <p>
+        暂无内容！
+    </p>
 </template>

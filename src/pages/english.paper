@@ -1,7 +1,16 @@
 <template class='book-list'>
+    <h2>
+        读书
+    </h2>
     <ul>
         <li @click='loadPage("https://knowpedia.github.io/English-Grammar/")' class='English-Grammar'>
             英语语法
         </li>
     </ul>
+    <h2>
+        笔记
+    </h2>
+    <p>
+        暂无内容！
+    </p>
 </template>

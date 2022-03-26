@@ -25,7 +25,7 @@
         </div>
     </header>
     <div class="read-book">
-        <h2>读书笔记</h2>
+        <h2>读书&笔记</h2>
         <ul>
             <li class='mathematics' @click='loadPage("#/mathematics")'>
                 <h3>

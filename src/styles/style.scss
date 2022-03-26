@@ -2,6 +2,18 @@
 .book-list {
     padding: 10px 0;
 
+    &>h2{
+        padding:10px;
+        &::before{
+            content: "#";
+            color: #711e32;
+        }
+    }
+
+    &>p{
+        padding:30px;
+    }
+
     &>ul {
         &>li {
             cursor: pointer;

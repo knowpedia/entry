@@ -1,6 +1,11 @@
 <template>
     <header>
         Knowpedia
+        <div>
+            本网站是为了方便日常查询，内容比较随意，你可以
+            <a href="https://github.com/knowpedia/entry/issues" target="_blank">加入我们</a>
+            一起整理～
+        </div>
         <span>
             <ui-search></ui-search>
         </span>
@@ -85,6 +90,27 @@
             line-height: 74px;
             height: 74px;
             background-color: white;
+            white-space: nowrap;
+
+            &>div {
+                display: inline-block;
+                font-size: 16px;
+                background: #4ca6bc;
+                color: white;
+                padding: 5px 30px;
+                font-weight: 200;
+                font-family: cursive;
+                line-height: 2em;
+                margin-left: 50px;
+                outline: 1px dashed #4ca6bc;
+
+                &>a {
+                    background-color: white;
+                    color: #4ca6bc;
+                    margin: 0 10px;
+                    padding: 5px;
+                }
+            }
 
             &>span {
                 float: right;
